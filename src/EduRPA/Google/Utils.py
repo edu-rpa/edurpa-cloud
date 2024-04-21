@@ -1,5 +1,5 @@
 from robot.api.deco import keyword
-from CustomOAuth import CustomOAuth
+from .CustomOAuth import CustomOAuth
 
 class Utils:
     def __init__(self):
