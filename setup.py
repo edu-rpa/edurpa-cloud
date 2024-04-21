@@ -15,13 +15,13 @@ with pathlib.Path('./requirements.txt').open() as requirements_txt:
 
 setuptools.setup(
     name="edurpa_google",
-    version="1.0.4",
+    version="1.0.7",
     author="david",
     author_email="davidhuynh0222@gmail.com",
     description="Education Google RPA Librabry For Education",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/edu-rpa/edu-rpa-library",
+    url="https://github.com/edu-rpa/edurpa-google",
     package_dir={'': 'src'},
     packages=setuptools.find_packages(where='src'),
     classifiers=[
