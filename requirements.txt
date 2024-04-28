@@ -3,3 +3,4 @@ rpaframework==27.7.0
 google-api-python-client
 PyPDF2
 gdown
+requests
