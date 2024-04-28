@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+src/EduRPA/__init__.py
+src/EduRPA/Google/Classroom.py
+src/EduRPA/Google/CustomOAuth.py
+src/EduRPA/Google/Form.py
+src/EduRPA/Google/Utils.py
+src/EduRPA/Google/__init__.py
+src/EduRPA/Storage/Storage.py
+src/EduRPA/Storage/__init__.py
+src/edurpa.egg-info/PKG-INFO
+src/edurpa.egg-info/SOURCES.txt
+src/edurpa.egg-info/dependency_links.txt
+src/edurpa.egg-info/requires.txt
+src/edurpa.egg-info/top_level.txt
