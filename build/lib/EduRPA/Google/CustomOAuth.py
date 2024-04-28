@@ -3,9 +3,9 @@ import pickle
 import google.oauth2.credentials
 import io
 import json
-import os.path
 
-VAULT_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '../devdata/vault.json'))
+# Get the current working directory
+VAULT_PATH = './devdata/vault.json'
 
 class CustomOAuth():
     def __init__(self):
