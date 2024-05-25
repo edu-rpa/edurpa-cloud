@@ -1,5 +1,5 @@
 name = 'edurpa_storage'
-from .Storage import Storage
+from .S3Storage import S3Storage
 from robotlibcore import DynamicCore
 
 class Storage(DynamicCore):
@@ -8,6 +8,6 @@ class Storage(DynamicCore):
     ):
         # Register keyword libraries to LibCore
         libraries = [
-            Storage()
+            S3Storage()
         ]
         super().__init__(libraries)

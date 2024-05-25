@@ -14,8 +14,8 @@ with pathlib.Path('./requirements.txt').open() as requirements_txt:
         ]
 
 setuptools.setup(
-    name="edurpa",
-    version="0.0.1",
+    name="edurpa-cloud",
+    version="0.0.2",
     author="david",
     author_email="davidhuynh0222@gmail.com",
     description="Education Google RPA Librabry For Education",

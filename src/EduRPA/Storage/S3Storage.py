@@ -2,7 +2,7 @@ from robot.api.deco import keyword, not_keyword
 import os
 import requests
 
-class Storage:
+class S3Storage:
     def __init__(self) -> None:
         self.user_id = os.getenv('USER_ID')
         self.service_key = os.getenv('SERVICE_KEY')
