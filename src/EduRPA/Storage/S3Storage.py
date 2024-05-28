@@ -5,8 +5,8 @@ import requests
 class S3Storage:
     def __init__(self) -> None:
         self.user_id = os.getenv('USER_ID')
-        self.service_key = os.getenv('SERVICE_KEY')
-        self.base_url = os.getenv('BASE_URL')
+        self.service_key = os.getenv('FILE_STORAGE_SERVICE_KEY')
+        self.base_url = os.getenv('FILE_STORAGE_BASE_URL')
 
     @keyword("Upload File", types={'file': 'str', 'file_name': 'str', 'folder_path': 'str'})
     def upload_file(self, file, file_name, folder_path):
