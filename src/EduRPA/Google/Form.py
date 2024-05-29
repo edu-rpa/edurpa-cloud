@@ -10,37 +10,37 @@ from googleapiclient.http import MediaIoBaseDownload
 import random
 
 class Form:
-    def __init__(self, credential_file: str = None):
-        if not credential_file:
-            self.creds = None
-            return
+    def __init__(self):
+        self.creds=None
+    
+    @keyword("Set Up Form Connection")
+    def authenticate(self, token_file_path: str=None):
+        if not token_file_path:
+            raise {'error': 'Not found credential file'}
 
-        with open(credential_file, 'r') as file:
+        with open(token_file_path, 'r') as file:
             data = json.load(file)
+            
+        access_token = data['access_token']
+        refresh_token = data['refresh_token']
+        token_uri = data['token_uri']
+        client_id = data['client_id']
+        client_secret = data['client_secret']
+        scopes = data['scopes']
         
-        self.access_token = data['access_token']
-        self.refresh_token = data['refresh_token']
-        self.token_uri = data['token_uri']
-        self.client_id = data['client_id']
-        self.client_secret = data['client_secret']
-        self.scopes = data['scopes']
-        self.creds = self.authenticate()
-        
-    @not_keyword
-    def authenticate(self):
-        creds = Credentials(
-            token=self.access_token,
-            refresh_token=self.refresh_token,
-            token_uri=self.token_uri,
-            client_id=self.client_id,
-            client_secret=self.client_secret,
-            scopes=self.scopes
+        self.creds = Credentials(
+            token=access_token,
+            refresh_token=refresh_token,
+            token_uri=token_uri,
+            client_id=client_id,
+            client_secret=client_secret,
+            scopes=scopes
         )
         
-        if not creds.valid:
-            creds.refresh(Request())
-
-        return creds
+        if not self.creds.valid:
+            self.creds.refresh(Request())
+            
+        return self.creds
 
     @keyword("Create Form")
     def create_new_form(self, title):
