@@ -109,7 +109,7 @@ class Form:
         
     @not_keyword
     def parse_questions(self, content):
-        pattern = r'Câu (\d+)\.\s*(.*?)\s*A\.\s*(.*?)\s*B\.\s*(.*?)\s*C\.\s*(.*?)\s*D\.\s*(.*?)(?=\s*Câu|\Z)'
+        pattern = r'Câu (\d+)[.:]\s*(.*?)\s*A\.\s*(.*?)\s*B\.\s*(.*?)\s*C\.\s*(.*?)\s*D\.\s*(.*?)(?=\s*Câu|\Z)'
         matches = re.findall(pattern, content, re.DOTALL)
         if not matches:
             return None  # Return None or an empty list if no matches are found
